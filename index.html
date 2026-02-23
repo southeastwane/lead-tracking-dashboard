@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Lead Tracking Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", "sans-serif";
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <h1>Lead Tracking Dashboard</h1>
+    </header>
+
+    <!-- status -->
+    <section class="status">
+        <div class="card">
+            <h2>Total Calls</h2>
+            <p id="totalCalls">0</p>
+        </div>
+        <div class="card">
+            <h2>Total Calls</h2>
+            <p id="answeredCalls">0</p>
+        </div>
+        <div class="card">
+            <h2>Total Calls</h2>
+            <p id="missedCalls">0</p>
+        </div>
+    </section>
+    <!-- filer -->
+    <section class="filters">
+        <select id="statusFilter">
+            <option value="all">All Calls</option>
+            <option value="answered">Answered Calls</option>
+            <option value="missed">Missed Calls</option>
+        </select>
+    </section>
+    <!-- table container -->
+    <section class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Caller</th>
+                    <th>Page</th>
+                    <th>Status</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+            <tbody id="leadTable"></tbody>
+        </table>
+    </section>
+
+
+    <script src="/javascript/script.js"></script>
+</body>
+
+</html>
