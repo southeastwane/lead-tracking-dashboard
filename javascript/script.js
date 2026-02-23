@@ -1,10 +1,8 @@
-console.log('Dashboard js loaded')
-
-
 
 
 
 document.addEventListener("DOMContentLoaded", () => {
+
     const leads = [
         {
             date: "2026-02-18",
@@ -45,41 +43,23 @@ document.addEventListener("DOMContentLoaded", () => {
         table.appendChild(row)
 
     })
+
+
 })
 
-// const tableBody = document.getElementById("leadTable")
-// const statusFilter = document.getElementById("statusFilter")
 
-// function renderTable(filter = "all") {
-//     tableBody.innerHTML = "";
-
-//     const filteredLeads = leads.filter(lead => filter === "all" ? true : lead.status === filter);
-
-
-//     document.getElementById("totalCalls").textContent = leads.length;
-//     document.getElementById("answeredCalls").textContent = leads.filter(l => l.status === "answered").length;
-//     document.getElementById("missedCalls").textContent = leads.filter(l => l.status === "missed").length;
-
-
-
-//     filteredLeads.forEach(lead => {
-//         const row = document.createElement('tr')
-
-//         row.innerHTML = `
-// <td>${lead.date}</td>
-// <td>${lead.caller}</td>
-// <td>${lead.page}</td>
-// <td>${lead.status}</td>
-// <td>${lead.duration}</td>
-// `;
-
-//         tableBody.appendChild(row)
-
-//     });
-
+/* fetch request from the font-end option. */
+// async function fetchLeads() {
+//     try {
+//         const response = await fetch("/api/leads");
+//         const data = await response.json();
+//         console.log("Fetched leads:", data);
+//         return data;
+//     } catch (error) {
+//         console.error("Error fetching leads:", error);
+//         return [];
+//     }
 // }
-// statusFilter.addEventListener("change", (e) => {
-//     renderTable(e.target.value);
-// });
 
-// renderTable();
+
+// fetchLeads();
