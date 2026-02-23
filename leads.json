@@ -1,0 +1,23 @@
+[
+    {
+        "date": "2026-02-23",
+        "caller": "201-555-1234",
+        "page": "/towing",
+        "status": "answered",
+        "duration": "00:02:30"
+    },
+    {
+        "date": "2026-02-23",
+        "caller": "201-555-1234",
+        "page": "/junk-removal",
+        "status": "answered",
+        "duration": "00:02:40"
+    },
+    {
+        "date": "2026-02-22",
+        "caller": "201-555-1234",
+        "page": "/fencing",
+        "status": "answered",
+        "duration": "00:05:30"
+    }
+]

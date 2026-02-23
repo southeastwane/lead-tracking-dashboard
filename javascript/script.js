@@ -1,4 +1,17 @@
 
+/**Open your console then
+Click on the select menu . Look in the
+console to see the selected value */
+
+const filterInput = document.getElementById("statusFilter");
+
+filterInput.addEventListener("change", (e) => {
+    const selected = e.target.value;
+
+    console.log("Selected filter:", selected);
+}
+)
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -48,18 +61,20 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
-/* fetch request from the font-end option. */
-// async function fetchLeads() {
-//     try {
-//         const response = await fetch("/api/leads");
-//         const data = await response.json();
-//         console.log("Fetched leads:", data);
-//         return data;
-//     } catch (error) {
-//         console.error("Error fetching leads:", error);
-//         return [];
-//     }
-// }
+/* fetch request testing with leads.json for quick testing.
+Just open the console for an array of objects */
+
+async function fetchLeads() {
+    try {
+        const response = await fetch("leads.json");
+        const data = await response.json();
+        console.log("Fetched leads:", data);
+        return data;
+    } catch (error) {
+        console.error("Error fetching leads:", error);
+        return [];
+    }
+}
 
 
-// fetchLeads();
+fetchLeads();
